@@ -1,0 +1,23 @@
+intersection_action_manager:
+  ros__parameters:
+    conf_th: 0.6
+    stable_frames: 3
+    wait_timeout: 30.0
+    execute_timeout: 10.0
+    done_reset_delay: 3.0
+    max_vel_approach: 0.1
+    max_vel_execute: 0.15
+
+    # turn control (angle-dominant)
+    turn_target_angle_deg: 90.0
+    turn_max_angle_deg: 105.0
+    turn_min_angle_deg_for_line_exit: 55.0
+    right_turn_negative: true
+
+    # line reacquire (optional early exit)
+    turn_use_line_reacquire: true
+    line_reacquire_topic: /line_follow/line_found
+    line_reacquire_true_frames: 2
+
+    # yaw source
+    odom_topic: /odom
